@@ -81,7 +81,13 @@ const animationTimeline = () => {
         .to(".idea-5", 0.5, { scale: 0.2, opacity: 0 }, "+=1.5")
         .staggerFrom(".idea-6 span", 0.6, { scale: 3, opacity: 0, rotation: 15, ease: Expo.easeOut }, 0.1)
         .staggerTo(".idea-6 span", 0.6, { scale: 3, opacity: 0, rotation: -15, ease: Expo.easeOut }, 0.1, "+=1")
-        .staggerFromTo(".baloons img", 2, { opacity: 0.9, y: 1400 }, { opacity: 1, y: -1000 }, 0.15) // Reduced stagger
+        .staggerFromTo(
+  ".baloons img", 
+  2, 
+  { opacity: 0.9, y: 1400 }, 
+  { opacity: 1, y: -1000 }, 
+  0.15 // Stagger timing
+)
         .from(".profile-picture", 0.4, { scale: 3.5, opacity: 0, x: 25, y: -25, rotationZ: -45 }, "-=1.5")
         .from(".hat", 0.4, { x: -100, y: 350, rotation: -180, opacity: 0 })
         .staggerFrom(".wish-hbd span", 0.5, { opacity: 0, y: -50, rotation: 150, skewX: "30deg", ease: Elastic.easeOut.config(1, 0.5) }, 0.05)
